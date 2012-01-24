@@ -1,0 +1,18 @@
+{
+  "name": "Node Irc Log extract",
+  "version": "1.0",
+  "description": "用来对http://nodejs.debuggable.com/保存的irc日志进行处理",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "http://nodejs.debuggable.com/",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://nodejs.debuggable.com/*.txt"],
+      "js": ["jquery.js", "process.js"]
+    }
+  ]
+}
